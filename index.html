@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>-----</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login form">
+      <header>Bem-Vindo</header>
+      <form>
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="senha" placeholder="Senha">
+        <a href="#">Esqueceu a senha?</a>
+        <input type="button" class="button" value="Login" onclick="login()">
+      </form>
+      <div class="signup">
+        <span class="signup">Ainda não tem conta?
+         <a href="register.html">Cadastre-se</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+
+      if (email === "test@gmail.com" && senha === "12345") {
+        alert("Login bem-sucedido!");
+        window.location.href = "home.html";
+      } else {
+        alert("Email ou senha incorretos. Tente novamente!");
+      }
+    }
+  </script>
+</body>
+</html>
+
